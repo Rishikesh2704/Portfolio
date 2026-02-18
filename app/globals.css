@@ -8,7 +8,41 @@ body {
     Arial, sans-serif;
 }
 
-/* .HeroBg {
-  background-color: #2d3436;
-  background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
-} */
+.heroBg {
+  background-color:rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(55px);
+}
+
+
+.CardBg{
+  background-color:rgba(22, 22, 22, 0.2);
+  backdrop-filter: blur(55px);
+}
+
+.TextBg{
+  background:linear-gradient(0deg, #ffff , rgb(99, 5, 175)60%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent  ;
+}
+
+/* Navbar tab highlighter animation*/
+
+.Highlighter{
+  height:2vmax;
+  width:7vmax;
+  background-color:white;
+  border-radius:0.5rem;
+  position:absolute;
+  transform:translateY(-185%);
+  transition:transform 0.2s ease-in-out
+}
+
+.Item1:active ~ .Highlighter{
+  transform: translateY(-185%);
+}
+.Item2:active ~ .Highlighter{
+  transform: translateY(0%);
+}
+.Item3:active ~ .Highlighter{
+  transform: translateY(185%);
+}

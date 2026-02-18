@@ -1,12 +1,12 @@
 export default function Navbar() {
-  const navItems = ["Home", "Projects", "Contact"];
   return (
-    <nav className="h-[95vh] w-[25vw] z-1 ml-5 bg-[#111010] rounded-2xl shadow-[0px_5px_14px_2px_black]">
+    <nav className="CardBg h-[95vh] w-[25vw] z-1 ml-5  rounded-2xl shadow-[0px_0px_1.5px_1.5px_#515050_inset]">
       <ul className="h-full w-full flex flex-col items-center justify-center gap-8 pt-5">
-        {navItems.map((item,idx) => (
-          <li key={Math.floor(Math.random())+idx} className="font-[550] text-white  ">{item}</li>
-        ))}
+        {/* <div className="Highlighter"></div> */}
+          <li className="Item1 z-1 font-[550] text-white cursor-pointer">Home</li>
+          <li className="Item2 z-1 font-[550] text-white cursor-pointer">Projects</li>
+          <li className="Item3 z-1 font-[550] text-white cursor-pointer">Contact</li>
       </ul>
     </nav>
-  );
+  )
 }
