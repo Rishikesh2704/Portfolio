@@ -28,21 +28,37 @@ body {
 /* Navbar tab highlighter animation*/
 
 .Highlighter{
-  height:2vmax;
-  width:7vmax;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  height: 100%;
+  width:calc(100% / 3);
   background-color:white;
   border-radius:0.5rem;
-  position:absolute;
-  transform:translateY(-185%);
+  transform:translateX(0%);
   transition:transform 0.2s ease-in-out
+  
 }
 
-.Item1:active ~ .Highlighter{
-  transform: translateY(-185%);
+
+.List-1:checked  ~ .Highlighter{
+  transform: translateX(0%);
 }
-.Item2:active ~ .Highlighter{
-  transform: translateY(0%);
+.List-1:checked ~ .List-1{
+  color:black;
 }
-.Item3:active ~ .Highlighter{
-  transform: translateY(185%);
+
+.List-2:checked ~ .Highlighter{
+  transform: translateX(100%);
+}
+.List-2:checked ~ .List-2{
+  color:black;
+}
+
+.List-3:checked ~ .Highlighter{
+  transform: translateX(200%);
+}
+.List-3:checked ~ .List-3{
+  color:black;
 }

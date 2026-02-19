@@ -1,12 +1,38 @@
+"use client";
 export default function Navbar() {
+  const handleOnClick = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+    const li = e.currentTarget;
+    console.log(li.classList[0]);
+  };
   return (
-    <nav className="CardBg h-[95vh] w-[25vw] z-1 ml-5  rounded-2xl shadow-[0px_0px_1.5px_1.5px_#515050_inset]">
-      <ul className="h-full w-full flex flex-col items-center justify-center gap-8 pt-5">
-        {/* <div className="Highlighter"></div> */}
-          <li className="Item1 z-1 font-[550] text-white cursor-pointer">Home</li>
-          <li className="Item2 z-1 font-[550] text-white cursor-pointer">Projects</li>
-          <li className="Item3 z-1 font-[550] text-white cursor-pointer">Contact</li>
-      </ul>
+    <nav className="CardBg h-[3rem] w-[30vw] z-1 ml-5  rounded-2xl shadow-[0px_0px_1.5px_1.5px_#515050_inset] flex items-center justify-center">
+      <fieldset className="relative w-fit flex  items-center justify-center ">
+        <input type="radio" id="Home" name="group" className="List-1 hidden" />
+        <label
+          htmlFor="Home"
+          className="List-1 w-[8rem] duration-100 ease-out text-white z-1 font-[550] p-[0.4rem_2.2rem] flex items-center justify-center cursor-pointer"
+        >
+          Home
+        </label>
+
+        <input type="radio" id="Projects" name="group" className="List-2 hidden" />
+        <label
+          htmlFor="Projects"
+          className="List-2 w-[8rem] z-1 font-[550]  text-white cursor-pointer p-[0.4rem_2.2rem] flex items-center justify-center"
+        >
+          Projects
+        </label>
+
+        <input type="radio" id="Contact" name="group" className="List-3 hidden" />
+        <label
+          htmlFor="Contact"
+          className="List-3 w-[8rem] z-1 font-[550]  text-white cursor-pointer p-[0.4rem_2.2rem] flex items-center justify-center"
+        >
+          Contact
+        </label>
+
+        <div className="Highlighter"></div>
+      </fieldset>
     </nav>
-  )
+  );
 }
