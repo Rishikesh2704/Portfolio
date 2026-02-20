@@ -14,7 +14,7 @@ export default function Home() {
   ];
   return (
     <div className="h-[90%] w-[95vw] grid grid-cols-2 grid-rows-2  place-content-center justify-center place-items-center z-1  text-white">
-      <section className="CardBg h-[75%] w-[80%] font-semibold pl-4 bg-[rgba(255, 255, 255, 0.8)] backdrop-blur-3xl flex flex-col shadow-[0px_0px_1.5px_1.5px_#515050_inset] text-start pl-2 justify-center text-white col-start-1 row-start-1 rounded-lg   ">
+      <section className="CardBg h-[75%] w-[80%] font-semibold pl-4 bg-[rgba(255, 255, 255, 0.8)] backdrop-blur-3xl flex flex-col  text-start pl-2 justify-center text-white col-start-1 row-start-1 rounded-lg   ">
         <h1 className="text-3xl">Hi, I am Rishikesh</h1>
         <p className="text-[#dad9d9] text-[0.95rem]">
           <span className="text-2xl TextBg">Frontend Developer</span>{" "}
@@ -25,7 +25,7 @@ export default function Home() {
           optimization and clean user experiences.
         </p>
       </section>
-      <section className="CardBg h-[65%] w-[70%] font-semibold pl-4  relative flex flex-col gap-4 text-start pl-2 justify-center text-[#e3e1e1] rounded-lg shadow-[0px_0px_1.5px_1.5px_#515050_inset]">
+      <section className="CardBg h-[65%] w-[70%] font-semibold pl-4  relative flex flex-col gap-4 text-start pl-2 justify-center text-[#e3e1e1] rounded-lg ">
         <h2 className="text-[1.25rem] underline underline-offset-2 absolute top-2 left-2 text-[#dad9d9] ml-2">
           Education
         </h2>
@@ -35,7 +35,7 @@ export default function Home() {
         <span>Pragati Mahavidyalay Degree College</span>
         <span>2023 - 2026</span>
       </section>
-      <section className="CardBg h-[75%] w-[90%] flex flex-col col-start-1 col-end-3  text-start pl-2 justify-center text-white  rounded-lg shadow-[0px_0px_1.5px_1.5px_#515050_inset]">
+      <section className="CardBg h-[75%] w-[90%] relative flex flex-col col-start-1 col-end-3  text-start pl-2 justify-center text-white  rounded-lg ">
         <h2 className="text-xl text-[#e4e3e3] absolute top-2 left-2 underline underline-offset-2 ml-3">
           Skills
         </h2>

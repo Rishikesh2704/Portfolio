@@ -9,56 +9,85 @@ body {
 }
 
 .heroBg {
-  background-color:rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(55px);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(105px);
+}
+
+.CardBg {
+  background-color: rgba(20, 19, 19, 0.4);
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 0px 3px 0.5px #c8c7c7 inset;
 }
 
 
-.CardBg{
-  background-color:rgba(22, 22, 22, 0.2);
-  backdrop-filter: blur(55px);
-}
-
-.TextBg{
-  background:linear-gradient(0deg, #ffff , rgb(99, 5, 175)60%);
+.TextBg {
+  background: linear-gradient(0deg, #ffff, rgb(99, 5, 175) 60%);
   background-clip: text;
-  -webkit-text-fill-color: transparent  ;
+  -webkit-text-fill-color: transparent;
+}
+
+.Circle-1 {
+  height: 17rem;
+  width: 17rem;
+  position: absolute;
+  top: 10rem;
+  left: 20rem;
+  border-radius: 50%;
+  font-size: 18px;
+  background: linear-gradient(135deg, #a85cff, #b82bff, #aa00ff);
+  box-shadow:
+    0 0 20px rgba(190, 70, 255, 0.6),
+    0 0 40px rgba(205, 40, 255, 0.5),
+    0 0 80px rgba(187, 0, 255, 0.4);
+}
+
+.Circle-2 {
+  height: 17rem;
+  width: 17rem;
+  position: absolute;
+  bottom: 5rem;
+  right: 20rem;
+  border-radius: 50%;
+  font-size: 18px;
+  background: linear-gradient(135deg, #a85cff, #b82bff, #aa00ff);
+  box-shadow:
+    0 0 20px rgba(190, 70, 255, 0.6),
+    0 0 40px rgba(205, 40, 255, 0.5),
+    0 0 80px rgba(187, 0, 255, 0.4);
 }
 
 /* Navbar tab highlighter animation*/
 
-.Highlighter{
-  position:absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  height: 100%;
-  width:calc(100% / 3);
-  background-color:white;
-  border-radius:0.5rem;
-  transform:translateX(0%);
-  transition:transform 0.2s ease-in-out
-  
+.Highlighter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 96%;
+  width: calc(100% / 3);
+  background-color: rgb(222, 220, 220);
+  border-radius: 0.9rem;
+  transform: translateX(0%);
+  transition: transform 0.2s ease-in-out;
 }
 
-
-.List-1:checked  ~ .Highlighter{
+.List-1:checked ~ .Highlighter {
   transform: translateX(0%);
 }
-.List-1:checked ~ .List-1{
-  color:black;
+.List-1:checked ~ .List-1 {
+  color: black;
 }
 
-.List-2:checked ~ .Highlighter{
+.List-2:checked ~ .Highlighter {
   transform: translateX(100%);
 }
-.List-2:checked ~ .List-2{
-  color:black;
+.List-2:checked ~ .List-2 {
+  color: black;
 }
 
-.List-3:checked ~ .Highlighter{
+.List-3:checked ~ .Highlighter {
   transform: translateX(200%);
 }
-.List-3:checked ~ .List-3{
-  color:black;
+.List-3:checked ~ .List-3 {
+  color: black;
 }
