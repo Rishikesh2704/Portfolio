@@ -15,14 +15,13 @@ export default function Home() {
   return (
     <div className="h-[90%] w-[95vw] grid grid-cols-2 grid-rows-2  place-content-center justify-center place-items-center z-1  text-white">
       <section className="CardBg h-[75%] w-[80%] font-semibold pl-4 bg-[rgba(255, 255, 255, 0.8)] backdrop-blur-3xl flex flex-col  text-start pl-2 justify-center text-white col-start-1 row-start-1 rounded-lg   ">
-        <h1 className="text-3xl">Hi, I am Rishikesh</h1>
-        <p className="text-[#dad9d9] text-[0.95rem]">
-          <span className="text-2xl TextBg">Frontend Developer</span>{" "}
-          specializing in React and Next.js, with hands-on experience building
-          performant, accessible, and scalable web applications. Strong in
-          TypeScript, state management (Redux Toolkit), and modern UI
-          development with Tailwind CSS. Passionate about performance
-          optimization and clean user experiences.
+        <h1 className="text-4xl">
+          Hi, I am <span className=" text-purple-500">Rishikesh </span>
+        </h1>
+        <h2 className="text-2xl font-semibold mt-2 text-gray-300">Frontend Developer</h2>
+        <p className="mt-4 text-[#dad9d9] text-[0.95rem]">
+          I build fast, accessible and scalable web applications using React,
+          Next.js and TypeScript.
         </p>
       </section>
       <section className="CardBg h-[65%] w-[70%] font-semibold pl-4  relative flex flex-col gap-4 text-start pl-2 justify-center text-[#e3e1e1] rounded-lg ">

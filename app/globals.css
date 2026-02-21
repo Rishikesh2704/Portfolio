@@ -9,16 +9,28 @@ body {
 }
 
 .heroBg {
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(105px);
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 40px 40px;
+}
+
+.navbar {
+  backdrop-filter: blur(15px);
+  background: rgba(20, 20, 20, 0.6);
 }
 
 .CardBg {
-  background-color: rgba(20, 19, 19, 0.4);
-  backdrop-filter: blur(15px);
-  box-shadow: 0px 0px 3px 0.5px #c8c7c7 inset;
+  /* background-color: rgba(20, 19, 19, 0.1); */
+  background: radial-gradient(
+    circle at top left,
+    rgba(168, 85, 247, 0.15),
+    transparent 40%
+  );
+  backdrop-filter: blur(21px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
 
 .TextBg {
   background: linear-gradient(0deg, #ffff, rgb(99, 5, 175) 60%);
@@ -35,6 +47,8 @@ body {
   border-radius: 50%;
   font-size: 18px;
   background: linear-gradient(135deg, #a85cff, #b82bff, #aa00ff);
+  filter:blur(120px);
+  opacity: 0.6;
   box-shadow:
     0 0 20px rgba(190, 70, 255, 0.6),
     0 0 40px rgba(205, 40, 255, 0.5),
@@ -50,6 +64,8 @@ body {
   border-radius: 50%;
   font-size: 18px;
   background: linear-gradient(135deg, #a85cff, #b82bff, #aa00ff);
+  filter:blur(120px);
+  opacity: 0.6;
   box-shadow:
     0 0 20px rgba(190, 70, 255, 0.6),
     0 0 40px rgba(205, 40, 255, 0.5),
