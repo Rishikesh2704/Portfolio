@@ -7,7 +7,7 @@ export default function Page() {
         <div className="Circle-1"></div>
         <div className="Circle-2"></div>
         <div className="heroBg h-screen w-screen absolute"></div>
-        <Navbar/>
+        {/* <Navbar/> */}
         <Home/>
     </main>
   );

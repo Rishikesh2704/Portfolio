@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 body {
-  background: var(--background);
+  background:#171616;
   color: var(--foreground);
   font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
+    overflow: hidden;
 }
 
 .heroBg {
@@ -77,34 +78,15 @@ body {
 
 .Highlighter {
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 0;
   bottom: 0;
   height: 96%;
   width: calc(100% / 3);
   background-color: rgb(222, 220, 220);
   border-radius: 0.9rem;
-  transform: translateX(0%);
+  transform: translateX(var(--pos,0%));
   transition: transform 0.2s ease-in-out;
-}
-
-.List-1:checked ~ .Highlighter {
-  transform: translateX(0%);
-}
-.List-1:checked ~ .List-1 {
-  color: black;
-}
-
-.List-2:checked ~ .Highlighter {
-  transform: translateX(100%);
-}
-.List-2:checked ~ .List-2 {
-  color: black;
-}
-
-.List-3:checked ~ .Highlighter {
-  transform: translateX(200%);
-}
-.List-3:checked ~ .List-3 {
-  color: black;
+  background:linear-gradient(145deg, #be61ed, #940fd7 90%);
+  box-shadow: 0 0 8px #aa00ff;
 }

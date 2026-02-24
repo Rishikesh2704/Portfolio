@@ -1,58 +1,39 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useRef } from "react";
 
 export default function Navbar() {
+  const HighlighterRef = useRef<HTMLDivElement>(null);
+  const path = usePathname().split("/")[1];
+  const navLinks = [
+    { id: 32, name: "Home", path: "/" },
+    { id: 56, name: "Projects", path: "/projects" },
+    { id: 98, name: "Contact", path: "/contact" },
+  ];
+  const selectedPath = navLinks.findIndex((li) =>  path === li.path.split("/")[1] )
+
+  const handleClick = (idx: number) => {
+    HighlighterRef.current?.style.setProperty("--pos", `${idx * 100}% `);
+  };
+
   return (
-    <nav className="navbar h-[3rem] w-fit z-1 ml-5  rounded-2xl flex items-center justify-center">
+    <nav className="navbar h-[3rem] w-fit z-1 ml-5 mt-2  rounded-2xl flex items-center justify-center">
       <fieldset className="relative w-fit h-full flex  items-center justify-center ">
-
-        <Link href="/" >
-          <input
-            type="radio"
-            id="Home"
-            name="group"
-            className="List-1 hidden"
-            defaultChecked
-          />
-          <label
-            htmlFor="Home"
-            className="List-1 w-[8rem] duration-200 ease-out text-[#d2d2d2] z-1 font-[550] p-[0.4rem_2.2rem] flex items-center justify-center cursor-pointer"
+        {navLinks.map((li, idx) => (
+          <Link
+            key={li.id}
+            href={`${li.path}`}
+            onClick={() => handleClick(idx)}
+            onLoad={() => HighlighterRef.current?.style.setProperty("--pos", `${idx * 100}%`)}
+            className={`w-[8rem]  text-[#d2d2d2] z-1 font-[550] p-[0.4rem_2.2rem] flex items-center justify-center cursor-pointer ${path === li.path.split("/")[1] ? "text-black" : "text-[#d2d2d2]"}`}
           >
-            Home
-          </label>
-        </Link>
+            {li.name}
+          </Link>
+        ))}
 
-        <Link href="/projects">
-          <input
-            type="radio"
-            id="Projects"
-            name="group"
-            className="List-2 hidden"
-          />
-          <label
-            htmlFor="Projects"
-            className="List-2 w-[8rem] z-1 font-[550] duration-200 ease-out  text-[#bbbaba] cursor-pointer p-[0.4rem_2.2rem] flex items-center justify-center"
-          >
-            Projects
-          </label>
-        </Link>
-
-        <Link href="/contact">
-          <input
-            type="radio"
-            id="Contact"
-            name="group"
-            className="List-3 hidden"
-          />
-          <label
-            htmlFor="Contact"
-            className="List-3 w-[8rem] z-1 font-[550] duration-200 ease-out text-[#bbbaba] cursor-pointer p-[0.4rem_2.2rem] flex items-center justify-center"
-          >
-            Contact
-          </label>
-        </Link>
-        <div className="Highlighter"></div>
+        <div className="Highlighter" style={{transform:`translateX(${selectedPath * 100}%)`}}></div>
       </fieldset>
     </nav>
   );
