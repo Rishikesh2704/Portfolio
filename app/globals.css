@@ -99,13 +99,21 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  height: 102%;
-  width: 102%;
-  transform: translate(-1%, -1%);
-  border-radius:0.6rem;
-  background: radial-gradient(#bc5cec, #a92ee7, #aa00ff);
+  height: 101%;
+  width: 101%;
+  transform: translate(-0.5%, -0.7%);
+  border-radius: 0.5rem;
+  background: radial-gradient(#be61ed, #940fd7, #cc00ff);
+  box-shadow: 0px 0px var(--glow, 10px) #be61ed;
+  transition:0.2s ease-in-out;
 }
+
 
 .Decription {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), black 50%);
+}
+
+.TextBg {
+  background: linear-gradient(145deg, #6bb9d5, #05f5ed 75%);
+  -webkit-background-clip: text;
 }
