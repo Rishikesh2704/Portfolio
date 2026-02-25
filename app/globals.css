@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 body {
-  background:#171616;
+  background: #171616;
   color: var(--foreground);
   font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .heroBg {
@@ -20,7 +20,7 @@ body {
 .navbar {
   backdrop-filter: blur(15px);
   background: rgba(57, 56, 56, 0.6);
-  border:1px solid #7a7777
+  border: 1px solid #7a7777;
 }
 
 .CardBg {
@@ -49,7 +49,7 @@ body {
   border-radius: 50%;
   font-size: 18px;
   background: linear-gradient(135deg, #a85cff, #b82bff, #aa00ff);
-  filter:blur(120px);
+  filter: blur(120px);
   opacity: 0.6;
   box-shadow:
     0 0 20px rgba(190, 70, 255, 0.6),
@@ -66,7 +66,7 @@ body {
   border-radius: 50%;
   font-size: 18px;
   background: linear-gradient(135deg, #a85cff, #b82bff, #aa00ff);
-  filter:blur(120px);
+  filter: blur(120px);
   opacity: 0.6;
   box-shadow:
     0 0 20px rgba(190, 70, 255, 0.6),
@@ -85,8 +85,27 @@ body {
   width: calc(100% / 3);
   background-color: rgb(222, 220, 220);
   border-radius: 0.9rem;
-  transform: translateX(var(--pos,0%));
+  transform: translateX(var(--pos, 0%));
   transition: transform 0.2s ease-in-out;
-  background:linear-gradient(145deg, #be61ed, #940fd7 90%);
+  background: linear-gradient(145deg, #be61ed, #940fd7 90%);
   box-shadow: 0 0 8px #aa00ff;
+}
+
+/* Project Card */
+
+.ProjectCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 102%;
+  width: 102%;
+  transform: translate(-1%, -1%);
+  border-radius:0.6rem;
+  background: radial-gradient(#bc5cec, #a92ee7, #aa00ff);
+}
+
+.Decription {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), black 50%);
 }
