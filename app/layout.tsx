@@ -37,8 +37,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-around items-center  `}
       >
-        <div className="Circle-1"></div>
-        <div className="Circle-2"></div>
+        {/* <div className="Circle-1"></div>
+        <div className="Circle-2"></div> */}
         <Navbar />  
         {children}
       </body>
