@@ -21,11 +21,12 @@ body {
 .navbar {
   backdrop-filter: blur(15px);
   border: 1px solid #363636;
-  background: radial-gradient(
+  background-image: url("/public/BackgroundImg.png");
+  /* background: radial-gradient(
     600px circle at 40% ,
     rgb(119, 35, 152),
     transparent 50%
-  );
+  ); */
 }
 
 .CardBg {
@@ -45,40 +46,6 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.Circle-1 {
-  height: 17rem;
-  width: 17rem;
-  position: absolute;
-  top: 10rem;
-  left: 20rem;
-  border-radius: 50%;
-  font-size: 18px;
-  background: linear-gradient(135deg, #a85cff, #b82bff, #aa00ff);
-  filter: blur(120px);
-  opacity: 0.6;
-  box-shadow:
-    0 0 20px rgba(190, 70, 255, 0.6),
-    0 0 40px rgba(205, 40, 255, 0.5),
-    0 0 80px rgba(187, 0, 255, 0.4);
-}
-
-.Circle-2 {
-  height: 17rem;
-  width: 17rem;
-  position: absolute;
-  bottom: 5rem;
-  right: 20rem;
-  border-radius: 50%;
-  font-size: 18px;
-  background: linear-gradient(135deg, #a85cff, #b82bff, #aa00ff);
-  filter: blur(120px);
-  opacity: 0.6;
-  box-shadow:
-    0 0 20px rgba(190, 70, 255, 0.6),
-    0 0 40px rgba(205, 40, 255, 0.5),
-    0 0 80px rgba(187, 0, 255, 0.4);
-}
-
 /* Navbar tab highlighter animation*/
 
 .Highlighter {
@@ -88,7 +55,6 @@ body {
   bottom: 0;
   height: 96%;
   width: calc(100% / 3);
-  background-color: rgb(222, 220, 220);
   border-radius: 0.9rem;
   transform: translateX(var(--pos, 0%));
   transition: transform 0.2s ease-in-out;
@@ -120,4 +86,11 @@ body {
 .TextBg {
   background: linear-gradient(145deg, #6bb9d5, #05f5ed 75%);
   -webkit-background-clip: text;
+}
+
+/* Contact */
+
+.SendMsgBtn {
+  background: linear-gradient(145deg, #be61ed, #940fd7 90%);
+  box-shadow: 0 0 8px #aa00ff;
 }

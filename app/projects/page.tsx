@@ -39,7 +39,7 @@ export default function page() {
       {Projects.map((project) => (
         <div
           key={project.id}
-          className="group h-[18rem] w-[30rem] relative bg-black col-start-1  rounded-lg flex items-center justify-center cursor-pointer hover:-translate-y-4 duration-300 hover:shadow-[0px_0px_18px_#c581e7] hover:scale-105 "
+          className="group h-[17rem] w-[30rem] relative bg-black col-start-1  rounded-lg flex items-center justify-center cursor-pointer hover:-translate-y-4 duration-300 hover:shadow-[0px_0px_18px_#c581e7] hover:scale-105 "
           onMouseOver={(e) =>
             e.currentTarget.style.setProperty("--glow", "30px")
           }
