@@ -16,7 +16,7 @@ export default function Home() {
     <div className="h-[90%] w-[95vw] grid grid-cols-2 grid-rows-2  place-content-center justify-center place-items-center z-1  text-white">
       <section className="CardBg h-[75%] w-[80%] font-semibold pl-4 bg-[rgba(255, 255, 255, 0.8)] backdrop-blur-3xl flex flex-col  text-start pl-2 justify-center text-white col-start-1 row-start-1 rounded-lg   ">
         <h1 className="text-4xl">
-          Hi, I am <span className=" text-purple-500">Rishikesh </span>
+          Hi, I am <span className=" text-[#aa00ff]">Rishikesh </span>
         </h1>
         <h2 className="text-2xl font-semibold mt-2 text-gray-300">Frontend Developer</h2>
         <p className="mt-4 text-[#dad9d9] text-[0.95rem]">
