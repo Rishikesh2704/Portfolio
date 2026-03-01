@@ -38,7 +38,7 @@ export default function Home() {
         <h2 className="text-xl text-[#e4e3e3] absolute top-2 left-2 underline underline-offset-2 ml-3">
           Skills
         </h2>
-        <ul className="grid grid-cols-7 place-content-center place-items-center text-center gap-y-4">
+        <ul className="grid grid-cols-7 place-content-center place-items-center text-center gap-y-4 mt-5">
           {skills.map((skill) => (
             <li
               key={skill.id}
@@ -46,8 +46,8 @@ export default function Home() {
             >
               <Image
                 src={skill.icon}
-                height={50}
-                width={50}
+                height={40}
+                width={40}
                 alt={`${skill.name} Logo`}
               ></Image>
               <p className="text-white">{skill.name}</p>
