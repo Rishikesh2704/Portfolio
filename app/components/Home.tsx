@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const skills = [
@@ -13,16 +14,17 @@ export default function Home() {
     { id: 84, name: "Git", icon: "/Icons/git.svg" },
   ];
   return (
-    <div className="h-[90%] w-[95vw] grid grid-cols-2 grid-rows-2  place-content-center justify-center place-items-center z-1  text-white">
+    <div className="h-[95%] w-[95vw] grid grid-cols-2 grid-rows-2  place-content-center justify-center place-items-center z-1  text-white">
       <section className="CardBg h-[75%] w-[80%] font-semibold pl-4 bg-[rgba(255, 255, 255, 0.8)] backdrop-blur-3xl flex flex-col  text-start pl-2 justify-center text-white col-start-1 row-start-1 rounded-lg   ">
         <h1 className="text-4xl">
-          Hi, I am <span className=" text-[#aa00ff]">Rishikesh </span>
+          Hi, I am <span className="TextBg">Rishikesh </span>
         </h1>
         <h2 className="text-2xl font-semibold mt-2 text-gray-300">Frontend Developer</h2>
         <p className="mt-4 text-[#dad9d9] text-[0.95rem]">
           I build fast, accessible and scalable web applications using React,
           Next.js and TypeScript.
         </p>
+        <Link href="/ResumeN.pdf" download={''} className="Btns w-fit  p-[0.4rem_0.8rem] rounded-lg mt-4  cursor-pointer"><i className="fa-solid fa-file-lines"></i>  Download Resume</Link>
       </section>
       <section className="CardBg h-[65%] w-[70%] font-semibold pl-4  relative flex flex-col gap-4 text-start pl-2 justify-center text-[#e3e1e1] rounded-lg ">
         <h2 className="text-[1.25rem] underline underline-offset-2 absolute top-2 left-2 text-[#dad9d9] ml-2">

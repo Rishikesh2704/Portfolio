@@ -22,26 +22,30 @@ body {
   backdrop-filter: blur(15px);
   border: 1px solid #363636;
   background-image: url("/public/BackgroundImg.png");
-  /* background: radial-gradient(
-    600px circle at 40% ,
-    rgb(119, 35, 152),
-    transparent 50%
-  ); */
 }
 
 .CardBg {
-  /* background-color: rgba(20, 19, 19, 0.1); */
   background: radial-gradient(
     600px circle at 20% 30%,
     rgba(168, 85, 247, 0.15),
     transparent 60%
   );
-  backdrop-filter: blur(21px);
+  backdrop-filter: blur(30px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(187, 116, 253, 0.15);
+  padding: 2rem 2rem;
+  transition: 0.2s ease-out;
+}
+
+.CardBg:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 40px rgb(173, 94, 247, 0.4);
+
+  transition: 0.2s ease-in-out;
 }
 
 .TextBg {
-  background: linear-gradient(0deg, #ffff, rgb(99, 5, 175) 60%);
+  background: linear-gradient(180deg, #da76f3, rgb(159, 32, 214) 80%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -83,11 +87,6 @@ body {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), black 50%);
 }
 
-.TextBg {
-  background: linear-gradient(145deg, #6bb9d5, #05f5ed 75%);
-  -webkit-background-clip: text;
-}
-
 /* Contact */
 
 .ContactCont {
@@ -103,4 +102,11 @@ body {
 .Btns {
   background: linear-gradient(145deg, #be61ed, #940fd7 90%);
   box-shadow: 0 0 8px #aa00ff;
+  transition: 0.2s ease-in-out;
+}
+
+.Btns:hover {
+  background: linear-gradient(145deg, #ae29f1, #610290 90%);
+  box-shadow: 0 0 9px #aa00ff;
+  transition: 0.2s ease-in-out;
 }

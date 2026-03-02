@@ -34,7 +34,7 @@ export default function Navbar() {
                 `${idx * 100}%`,
               )
             }
-            className={`w-[8rem]  text-[#888686] z-1 font-[550] p-[0.4rem_2.2rem] flex items-center justify-center cursor-pointer ${path === li.path.split("/")[1] ? "text-[#ddd9d9]" : "text-[#888686]"}`}
+            className={`w-[8rem]  text-[#888686] z-1 font-[550] p-[0.4rem_2.2rem] flex items-center justify-center cursor-pointer ${path === li.path.split("/")[1] ? "text-[#f1efef]" : "text-[#888686]"}`}
           >
             {li.name}
           </Link>
