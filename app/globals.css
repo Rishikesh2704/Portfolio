@@ -100,13 +100,18 @@ body {
 }
 
 .Btns {
-  background: linear-gradient(145deg, #be61ed, #940fd7 90%);
+  background: var(
+    --MessageBtnBG,
+    linear-gradient(145deg, #be61ed, #940fd7 90%)
+  );
   box-shadow: 0 0 8px #aa00ff;
   transition: 0.2s ease-in-out;
 }
 
 .Btns:hover {
-  background: linear-gradient(145deg, #ae29f1, #610290 90%);
+  background: linear-gradient(145deg, #a521e7, #3d005c 90%);
   box-shadow: 0 0 9px #aa00ff;
   transition: 0.2s ease-in-out;
 }
+
+/* Contact success*/

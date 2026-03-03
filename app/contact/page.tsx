@@ -1,10 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function page() {
-  const [name, SetName] = useState<string>("");
-  const [email, SetEmail] = useState<string>("");
-  const [Message, SetMessage] = useState<string>("");
+  const [contactState, setContactState] = useState("Send Message");
+  const submitRef = useRef<HTMLButtonElement>(null);
 
   const onSubmit = async (event: React.SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -17,6 +16,20 @@ export default function page() {
     });
 
     const data = await response.json();
+    if (data.success) {
+      submitRef.current?.style.setProperty(
+        "--MessageBtnBG",
+        "rgb(37, 242, 81)",
+      );
+      setContactState("Message Sent");
+      setTimeout(() => {
+        submitRef.current?.style.setProperty(
+          "--MessageBtnBG",
+          "linear-gradient(145deg, #ae29f1, #610290 90%)",
+        );
+        setContactState("Send Message");
+      }, 1500);
+    }
   };
 
   return (
@@ -34,7 +47,7 @@ export default function page() {
             id="name"
             name="Name"
             placeholder="Your name"
-            onChange={(e) => SetName(e.target.value)}
+            required
             className="ContactCont w-full rounded-md p-[0.3rem_0.4rem]"
           />
         </div>
@@ -51,26 +64,26 @@ export default function page() {
             id="email"
             name="Email"
             placeholder="Your email"
-            onChange={(e) => SetEmail(e.target.value)}
+            required
             className="ContactCont w-full rounded-md p-[0.3rem_0.4rem]"
           />
         </div>
 
         <textarea
-          onChange={(e) => SetMessage(e.target.value)}
           placeholder="Your Message"
           name="Message"
+          required
           className="ContactCont h-[50%] w-[90%] rounded-md p-[0.3rem_0.4rem]"
         ></textarea>
 
         <button
+          ref={submitRef}
           type="submit"
           className="Btns w-[80%] h-[10%] rounded-md cursor-pointer"
         >
-          Send Message
+          {contactState}
         </button>
       </form>
-
     </section>
   );
 }
