@@ -8,6 +8,9 @@ body {
     Arial, sans-serif;
   overflow: hidden;
   background: url("/BackgroundImg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .heroBg {
@@ -114,4 +117,3 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-/* Contact success*/

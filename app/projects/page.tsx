@@ -34,14 +34,14 @@ export default function page() {
     },
   ];
   return (
-    <section className="h-[90vh] w-screen flex justify-around items-center ">
+    <section className="h-[90vh] w-screen flex max-sm:flex-col  justify-around items-center ">
       <h1 className="absolute top-30 text-2xl text-white font-semibold">
         Featured <span className="text-[#aa00ff] ">Projects</span>
       </h1>
       {Projects.map((project) => (
         <div
           key={project.id}
-          className="group h-[17rem] w-[30rem] relative bg-black col-start-1  rounded-lg flex items-center justify-center cursor-pointer hover:-translate-y-1 duration-300 hover:shadow-[0px_0px_18px_#c581e7] hover:scale-102 "
+          className="group h-[17rem] w-[30rem] max-lg:h-[25vmax] max-lg:w-[40vmax] relative bg-black col-start-1  rounded-lg flex items-center justify-center cursor-pointer hover:-translate-y-1 duration-300 hover:shadow-[0px_0px_18px_#c581e7] hover:scale-102 "
           onMouseOver={(e) =>
             e.currentTarget.style.setProperty("--glow", "30px")
           }

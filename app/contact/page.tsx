@@ -36,7 +36,7 @@ export default function page() {
     <section className="text-white h-[90vh] w-screen flex items-center justify-center">
       <form
         onSubmit={(e) => onSubmit(e)}
-        className="h-[80%] w-[40%] ContactCont flex flex-col justify-around items-center  bg-[rgba(0, 0, 0, 0.1)] backdrop-blur-2xl rounded-lg border-1 border-gray-300"
+        className="ContactCont h-[80%] w-[40%] max-lg:h-[50vmax] max-lg:w-[40vmax]   flex flex-col justify-around items-center  bg-[rgba(0, 0, 0, 0.1)] backdrop-blur-2xl rounded-lg border-1 border-gray-300"
       >
         <div className="w-[90%] h-fit  flex flex-col items-start">
           <label htmlFor="Name" className="text-md font-semibold text-gray-100">
