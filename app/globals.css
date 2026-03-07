@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+
+
 body {
   background: #171616;
   color: var(--foreground);
@@ -38,6 +40,37 @@ body {
   box-shadow: 0 0 40px rgba(187, 116, 253, 0.15);
   /* padding: 2rem 2rem; */
   transition: 0.2s ease-out;
+}
+
+@keyframes LeftAnimation {
+  0%{
+    opacity:0;
+    transform:translateX(-20%)
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0%)
+  }
+}
+@keyframes RightAnimation {
+  0%{
+    opacity:0;
+    transform:translateX(20%)
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0%)
+  }
+}
+@keyframes BottomAnimation {
+  0%{
+    opacity:0;
+    transform:translateY(40%)
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0%)
+  }
 }
 
 .CardBg:hover {
