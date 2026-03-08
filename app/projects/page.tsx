@@ -34,7 +34,7 @@ export default function page() {
     },
   ];
   return (
-    <section className="h-[90vh] w-screen flex max-sm:flex-col  justify-around items-center ">
+    <section className="h-[90vh] w-screen flex  max-lg:flex-col justify-around items-center ">
       <h1 className="absolute top-30 text-2xl text-white font-semibold">
         Featured <span className="text-[#aa00ff] ">Projects</span>
       </h1>
