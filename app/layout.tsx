@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import "./responsive.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -35,12 +34,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+        <link rel="preload" as="image" href="/BackgroundImg.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen flex flex-col justify-around items-center  `}
       >
-        {/* <div className="Circle-1"></div>
-        <div className="Circle-2"></div> */}
         <Navbar />
         {children}
         <Footer />

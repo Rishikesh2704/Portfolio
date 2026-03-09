@@ -9,6 +9,8 @@ body {
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
   overflow: hidden;
+  height: 100vh;
+  width:100vw;
   background: url("/BackgroundImg.png");
   background-position: center;
   background-size: cover;
@@ -147,6 +149,12 @@ body {
 .Btns:hover {
   background: linear-gradient(145deg, #a521e7, #3d005c 90%);
   box-shadow: 0 0 9px #aa00ff;
+  transition: 0.2s ease-in-out;
+}
+
+.Btns:active {
+  background: linear-gradient(145deg, #a007ec, #29003d 90%);
+  box-shadow: 0 0 9px #7400ad;
   transition: 0.2s ease-in-out;
 }
 
